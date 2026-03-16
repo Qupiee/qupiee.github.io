@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUI MORGAN</title>
+    <link rel="icon" type="image/png" href="images/kuto/3.png">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+</head>
+
+<body class="text-slate-200 overflow-x-hidden">
+
+    <nav
+        class="cyber-header fixed top-0 left-0 right-0 z-50 bg-[#0a1428]/90 backdrop-blur-xl border-b border-[#67e8f9]/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-3xl font-bold tracking-tighter neon-text"><img src="images/mish/18.gif"
+                        class="logo_img" /></span></a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="index.html" class="nav-link text-[#e0f2fe] hover:text-[#67e8f9]">ГЛАВНАЯ</a>
+
+                <div class="group relative">
+                    <button onclick="toggleDropdown(this)"
+                        class="nav-link flex items-center gap-1 text-[#e0f2fe] hover:text-[#67e8f9]">
+                        ХУДОЖНИКИ
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div id="dropdown-menu" class="absolute hidden group-hover:block pt-6">
+                        <div
+                            class="bg-[#0f1f3a] border border-[#67e8f9]/30 rounded-2xl p-6 w-64 shadow-2xl neon-teal-glow">
+                            <a href="model.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#f472b6]">✦</span>
+                                <span>Модель</span>
+                            </a>
+                            <a href="emotes.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#67e8f9]">✦</span>
+                                <span>Смайлики</span>
+                            </a>
+                            <a href="overlay.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#f472b6]">✦</span>
+                                <span>Оверлей</span>
+                            </a>
+                            <a href="panels.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#67e8f9]">✦</span>
+                                <span>Панельки</span>
+                            </a>
+                            <a href="alerts.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#f472b6]">✦</span>
+                                <span>Алёрты</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="gallery.html" class="nav-link text-[#e0f2fe] hover:text-[#67e8f9]">ГАЛЕРЕЯ</a>
+                <a href="thanks.html" class="nav-link text-[#e0f2fe] hover:text-[#67e8f9]">ОСОБЫЕ БЛАГОДАРНОСТИ</a>
+            </div>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a1428] border-t border-[#67e8f9]/30 py-6">
+            <div class="flex flex-col px-6 gap-6 text-lg">
+                <a href="index.html" class="py-2">ГЛАВНАЯ</a>
+                <p class="py-2">ХУДОЖНИКИ</p>
+                <a href="model.html" class="pl-6 py-2 border-l border-[#f472b6]">→ Модель</a>
+                <a href="emotes.html" class="pl-6 py-2 border-l border-[#67e8f9]">→ Смайлики</a>
+                <a href="overlay.html" class="pl-6 py-2 border-l border-[#f472b6]">→ Оверлей</a>
+                <a href="panels.html" class="pl-6 py-2 border-l border-[#67e8f9]">→ Панельки</a>
+                <a href="alerts.html" class="pl-6 py-2 border-l border-[#f472b6]">→ Алёрты</a>
+                <a href="gallery.html" class="py-2">ГАЛЕРЕЯ</a>
+                <a href="thanks.html" class="py-2">ОСОБЫЕ БЛАГОДАРНОСТИ</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-20 min-h-screen">
+        <div class="max-w-7xl mx-auto px-6">
+            <h1 class="text-6xl font-black neon-text text-center">Модель</h1>
+
+            <br />
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <p class="text-[#f472b6] text-xl">Автор: Акси</p>
+                </div>
+                <a href="https://t.me/aksouch" class="text-4xl hover:text-[#f472b6]" target="_blank"><i
+                        class="fa-brands fa-telegram"></i></a>
+            </div>
+
+            <div class="mt-8">
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="overflow-hidden rounded-3xl border border-[#67e8f9]/40 bg-[#050d1f]/60">
+
+                        <div class="carousel-slide flex justify-center items-center py-4">
+                            <img onclick="openModal(this.src)" src="images/aksi/1.png"
+                                class="w-full h-auto max-h-[80vh] object-contain rounded-2xl cursor-pointer">
+                        </div>
+                        <div class="carousel-slide hidden flex justify-center items-center py-4">
+                            <img onclick="openModal(this.src)" src="images/aksi/2.png"
+                                class="w-full h-auto max-h-[80vh] object-contain rounded-2xl cursor-pointer">
+                        </div>
+                        <div class="carousel-slide hidden flex justify-center items-center py-4">
+                            <img onclick="openModal(this.src)" src="images/aksi/3.png"
+                                class="w-full h-auto max-h-[80vh] object-contain rounded-2xl cursor-pointer">
+                        </div>
+                    </div>
+
+                    <button onclick="prevSlide()"
+                        class="absolute top-1/2 -left-4 md:-left-8 -translate-y-1/2 bg-[#0a1428]/80 hover:bg-[#1e293b] border border-[#67e8f9]/60 text-[#67e8f9] w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg">
+                        << </button>
+                            <button onclick="nextSlide()"
+                                class="absolute top-1/2 -right-4 md:-right-8 -translate-y-1/2 bg-[#0a1428]/80 hover:bg-[#1e293b] border border-[#67e8f9]/60 text-[#67e8f9] w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg">
+                                >>
+                            </button>
+
+                            <div class="flex justify-center gap-3 mt-4">
+                                <button onclick="goToSlide(0)"
+                                    class="carousel-dot w-3 h-3 rounded-full bg-[#1e293b] border border-[#67e8f9]/70"></button>
+                                <button onclick="goToSlide(1)"
+                                    class="carousel-dot w-3 h-3 rounded-full bg-[#1e293b] border border-[#67e8f9]/70"></button>
+                                <button onclick="goToSlide(2)"
+                                    class="carousel-dot w-3 h-3 rounded-full bg-[#1e293b] border border-[#67e8f9]/70"></button>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#050d1f] py-12 border-t border-[#67e8f9]/20">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-slate-400">
+            Yui Morgan
+        </div>
+    </footer>
+
+    <div id="modal" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100] p-4">
+        <div
+            class="modal relative max-w-[95vw] max-h-[95vh] bg-[#0a1428] rounded-3xl overflow-hidden border border-[#67e8f9]/30 shadow-2xl">
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 text-4xl text-[#67e8f9] z-10 hover:text-[#f472b6] transition-colors">&times;</button>
+            <img id="modal-image" src="" alt="" class="max-w-full max-h-[90vh] w-auto h-auto object-contain">
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleDropdown(btn) {
+            const dropdown = document.getElementById('dropdown-menu');
+            dropdown.classList.toggle('hidden');
+        }
+
+        function openModal(src) {
+            document.getElementById('modal-image').src = src;
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.getElementById('modal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            if (!slides.length) return;
+
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.remove('hidden');
+                } else {
+                    slide.classList.add('hidden');
+                }
+            });
+
+            if (dots.length) {
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('bg-neon-teal');
+                        dot.classList.remove('bg-[#1e293b]');
+                    } else {
+                        dot.classList.remove('bg-neon-teal');
+                        dot.classList.add('bg-[#1e293b]');
+                    }
+                });
+            }
+        }
+
+        function goToSlide(index) {
+            if (!slides.length) return;
+            const total = slides.length;
+            currentSlide = ((index % total) + total) % total;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCarousel);
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.group')) {
+                const dd = document.getElementById('dropdown-menu');
+                if (dd) dd.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>

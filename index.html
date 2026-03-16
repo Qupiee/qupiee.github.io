@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUI MORGAN</title>
+    <link rel="icon" type="image/png" href="images/kuto/3.png">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+</head>
+
+<body class="text-slate-200 overflow-x-hidden">
+
+    <nav
+        class="cyber-header fixed top-0 left-0 right-0 z-50 bg-[#0a1428]/90 backdrop-blur-xl border-b border-[#67e8f9]/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-3xl font-bold tracking-tighter neon-text"><img src="images/mish/18.gif"
+                        class="logo_img" /></span></a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="index.html" class="nav-link text-[#e0f2fe] hover:text-[#67e8f9]">ГЛАВНАЯ</a>
+
+                <div class="group relative">
+                    <button onclick="toggleDropdown(this)"
+                        class="nav-link flex items-center gap-1 text-[#e0f2fe] hover:text-[#67e8f9]">
+                        ХУДОЖНИКИ
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div id="dropdown-menu" class="absolute hidden group-hover:block pt-6">
+                        <div
+                            class="bg-[#0f1f3a] border border-[#67e8f9]/30 rounded-2xl p-6 w-64 shadow-2xl neon-teal-glow">
+                            <a href="model.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#f472b6]">✦</span>
+                                <span>Модель</span>
+                            </a>
+                            <a href="emotes.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#67e8f9]">✦</span>
+                                <span>Смайлики</span>
+                            </a>
+                            <a href="overlay.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#f472b6]">✦</span>
+                                <span>Оверлей</span>
+                            </a>
+                            <a href="panels.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#67e8f9]">✦</span>
+                                <span>Панельки</span>
+                            </a>
+                            <a href="alerts.html"
+                                class="block py-3 px-4 hover:bg-[#1e3a5f] rounded-xl flex items-center gap-3 transition-colors">
+                                <span class="text-[#f472b6]">✦</span>
+                                <span>Алёрты</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="gallery.html" class="nav-link text-[#e0f2fe] hover:text-[#67e8f9]">ГАЛЕРЕЯ</a>
+                <a href="thanks.html" class="nav-link text-[#e0f2fe] hover:text-[#67e8f9]">ОСОБЫЕ БЛАГОДАРНОСТИ</a>
+            </div>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a1428] border-t border-[#67e8f9]/30 py-6">
+            <div class="flex flex-col px-6 gap-6 text-lg">
+                <a href="index.html" class="py-2">ГЛАВНАЯ</a>
+                <p class="py-2">ХУДОЖНИКИ</p>
+                <a href="model.html" class="pl-6 py-2 border-l border-[#f472b6]">→ Модель</a>
+                <a href="emotes.html" class="pl-6 py-2 border-l border-[#67e8f9]">→ Смайлики</a>
+                <a href="overlay.html" class="pl-6 py-2 border-l border-[#f472b6]">→ Оверлей</a>
+                <a href="panels.html" class="pl-6 py-2 border-l border-[#67e8f9]">→ Панельки</a>
+                <a href="alerts.html" class="pl-6 py-2 border-l border-[#f472b6]">→ Алёрты</a>
+                <a href="gallery.html" class="py-2">ГАЛЕРЕЯ</a>
+                <a href="thanks.html" class="py-2">ОСОБЫЕ БЛАГОДАРНОСТИ</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20 min-h-screen">
+
+        <section class="min-h-screen flex items-center relative hero-bg">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+                <div class="relative order-2 md:order-1 w-full max-w-lg mx-auto aspect-square">
+                    <img src="images/avatar.jpg" alt="VTuber модель" width="512" height="512"
+                        class="hero-avatar-img w-full h-full object-cover object-center rounded-3xl shadow-2xl border border-[#67e8f9]/30">
+
+                    <div
+                        class="absolute -top-6 -right-6 bg-[#0a1428] border border-[#f472b6] text-[#f472b6] px-8 py-3 rounded-2xl text-sm font-bold tracking-widest neon-pink-glow rotate-12">
+                        МЫШЬ(КРЫСА)
+                    </div>
+                </div>
+
+                <div class="order-1 md:order-2 space-y-6">
+                    <div class="space-y-4">
+                        <h1 class="text-7xl text-center md:text-8xl font-black tracking-tighter neon-text leading-none">
+                            YUI MORGAN</h1>
+
+                    </div>
+
+                    <div class="max-w-auto text-lg leading-relaxed text-slate-300">
+                        Йоу, собаки, я Наруто Узумаки! Да и, кстати, я будущий Хокаге! У меня все круто, я же все-таки
+                        Наруто.
+                        Ненавижу Орочимару и Кабуто. Знаю много джутсу. Ненавижу бутсы. Круче клонов и разенгана не
+                        найдутся.
+                        У меня фанаты, плюс, я люблю Хинату. Немало друзей и однокомнатная хата!
+                    </div>
+
+                    <div class="justify-center items-center flex gap-6">
+                        <a href="https://www.donationalerts.com/r/yui_morgan" target="_blank"
+                            class="px-10 py-5 bg-gradient-to-r from-[#f472b6] to-[#67e8f9] text-[#0a1428] font-bold rounded-2xl hover:scale-105 transition-transform flex items-center gap-3">
+                            <i class="fa-regular fa-heart"></i>
+                            НАКОРМИТЬ
+                        </a>
+                        <a href="https://twitch.tv/yui_morgan" target="_blank"
+                            class="px-10 py-5 border border-[#67e8f9] hover:bg-[#67e8f9]/10 rounded-2xl transition-all flex items-center gap-3">
+                            <i class="fa-brands fa-twitch"></i>
+                            СТРИМЫ
+                        </a>
+                    </div>
+
+                    <div class="text-3xl text-center text-[#67e8f9] pt-4">Мои социальные сети</div>
+                    <div class="justify-center items-center flex gap-8 text-3xl">
+                        <a href="https://t.me/YuiMorgan" class="hover:text-[#f472b6] transition-colors"
+                            target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.tiktok.com/@yui_morgan" class="hover:text-[#f472b6] transition-colors"
+                            target="_blank"><i class="fa-brands fa-tiktok" target="_blank"></i></a>
+                        <a href="https://www.youtube.com/@yui1morgan" class="hover:text-[#f472b6] transition-colors"
+                            target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://boosty.to/yui1morgan" class="hover:text-[#f472b6] transition-colors" target="_blank">
+                            <img src="images/boosty icon/boosty.svg" alt="Boosty"
+                                class="w-8 h-8 inline-block align-middle">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3">
+                <div class="w-3 h-[1px] bg-gradient-to-r from-transparent via-[#67e8f9] to-transparent"
+                    style="width: 100%;"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
+        <div class="modal max-w-4xl w-full mx-4 bg-[#0a1428] rounded-3xl overflow-hidden relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-4xl text-white z-10">&times;</button>
+            <img id="modal-image" src="" alt="" class="w-full h-auto">
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleDropdown(btn) {
+            const dropdown = document.getElementById('dropdown-menu');
+            dropdown.classList.toggle('hidden');
+        }
+        
+        function openModal(src) {
+            document.getElementById('modal-image').src = src;
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.group')) {
+                const dd = document.getElementById('dropdown-menu');
+                if (dd) dd.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
