@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============ Дизайн-токены: серебристо-синяя палитра с розовыми акцентами ============ */
+@theme {
+  --font-sans: var(--font-nunito), ui-rounded, system-ui, sans-serif;
+  --font-display: var(--font-comfortaa), var(--font-nunito), ui-rounded, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-silver-50: #f7f9fc;
+  --color-silver-100: #eef1f7;
+  --color-silver-200: #dfe4ee;
+  --color-silver-300: #c7cfdd;
+  --color-silver-400: #a3aec2;
+  --color-silver-500: #7f8aa3;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-azure-50: #f1f5ff;
+  --color-azure-100: #e3ebff;
+  --color-azure-200: #c6d6ff;
+  --color-azure-300: #9db8f7;
+  --color-azure-400: #7898ea;
+  --color-azure-500: #5677d6;
+  --color-azure-600: #4560bd;
+  --color-azure-700: #374d99;
+  --color-azure-800: #2b3c78;
+
+  --color-ink: #26315a;
+  --color-ink-soft: #5a6688;
+
+  --color-blush-100: #ffeef5;
+  --color-blush-200: #ffd6e7;
+  --color-blush-300: #f9a8c9;
+  --color-blush-400: #f282b0;
+  --color-blush-500: #e15e97;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  --shadow-soft: 0 10px 30px -14px rgb(69 96 189 / 0.35), 0 2px 6px -2px rgb(69 96 189 / 0.12);
+  --shadow-lift: 0 22px 44px -18px rgb(69 96 189 / 0.45), 0 4px 10px -4px rgb(69 96 189 / 0.15);
+  --shadow-glow-pink: 0 10px 30px -10px rgb(242 130 176 / 0.6);
+
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-twinkle: twinkle 2.8s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.25s ease-out both;
+  --animate-pop-in: pop-in 0.35s var(--ease-bounce) both;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.35; transform: scale(0.85) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.1) rotate(20deg); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes pop-in {
+    from { opacity: 0; transform: translateY(8px) scale(0.97); }
+    to { opacity: 1; transform: none; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============ База ============ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-silver-100 font-sans text-ink antialiased;
+    /* мягкий градиент + россыпь звёздочек и точек (cutecore) */
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath fill='%23c6d6ff' d='M20 12c.5 4 3.5 7 7.5 7.5-4 .5-7 3.5-7.5 7.5-.5-4-3.5-7-7.5-7.5 4-.5 7-3.5 7.5-7.5z'/%3E%3Ccircle cx='85' cy='30' r='2' fill='%23f9a8c9'/%3E%3Ccircle cx='60' cy='90' r='1.6' fill='%239db8f7'/%3E%3Cpath fill='%23ffd6e7' d='M95 78c.3 2.4 2.1 4.2 4.5 4.5-2.4.3-4.2 2.1-4.5 4.5-.3-2.4-2.1-4.2-4.5-4.5 2.4-.3 4.2-2.1 4.5-4.5z'/%3E%3C/svg%3E"),
+      radial-gradient(ellipse 80% 60% at 10% 0%, var(--color-azure-100), transparent 70%),
+      radial-gradient(ellipse 60% 50% at 100% 20%, var(--color-blush-100), transparent 70%),
+      linear-gradient(180deg, var(--color-silver-50), var(--color-silver-100) 40%, var(--color-azure-50));
+    background-attachment: scroll, fixed, fixed, fixed;
+  }
+  h1, h2, h3 {
+    @apply font-display font-bold tracking-tight text-azure-800;
+  }
+  ::selection {
+    @apply bg-blush-200 text-ink;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-blush-400;
+  }
+  img, video {
+    @apply select-none;
+  }
+}
+
+/* ============ Компоненты (утилиты, доступные как классы и через @apply) ============ */
+/* «стеклянная» карточка */
+@utility card {
+  @apply rounded-4xl border border-white/80 bg-white/70 shadow-soft backdrop-blur-md;
+}
+/* внутренний блок с пунктирной рамкой — частый мотив cutecore */
+@utility dotted {
+  @apply rounded-3xl border-2 border-dashed border-azure-200;
+}
+@utility chip {
+  @apply inline-flex items-center gap-1.5 rounded-full border border-azure-200 bg-white/80 px-3 py-1 text-sm font-semibold text-azure-700;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-display text-sm font-bold
+    transition duration-200 ease-(--ease-bounce) select-none
+    hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-linear-to-b from-azure-400 to-azure-600 text-white shadow-soft hover:shadow-lift;
+}
+@utility btn-pink {
+  @apply btn bg-linear-to-b from-blush-300 to-blush-400 text-white shadow-glow-pink hover:brightness-105;
+}
+@utility btn-ghost {
+  @apply btn border border-azure-200 bg-white/80 text-azure-700 hover:border-azure-300 hover:bg-white;
+}
+@utility link {
+  @apply font-semibold text-azure-600 underline decoration-blush-300 decoration-2 underline-offset-4 transition-colors hover:text-blush-500;
+}
+/* «серебряный» текст для заголовка-логотипа */
+@utility text-chrome {
+  background: linear-gradient(180deg, #4560bd 0%, #7898ea 45%, #a3aec2 55%, #374d99 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

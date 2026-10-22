@@ -1,0 +1,254 @@
+[
+  {
+    "src": "gallery/art-01.png",
+    "author": "artist-3",
+    "link": "https://example.com/artist",
+    "title": "Арт №1"
+  },
+  {
+    "src": "gallery/art-02.png",
+    "author": "artist-3",
+    "link": "https://example.com/artist",
+    "title": "Арт №2"
+  },
+  {
+    "src": "gallery/art-03.png",
+    "author": "artist-3",
+    "link": "https://example.com/artist",
+    "title": "Арт №3"
+  },
+  {
+    "src": "gallery/art-04.png",
+    "author": "artist-3",
+    "link": "https://example.com/artist",
+    "title": "Арт №4"
+  },
+  {
+    "src": "gallery/art-05.png",
+    "author": "artist-3",
+    "link": "https://example.com/artist",
+    "title": "Арт №5"
+  },
+  {
+    "src": "gallery/art-06.png",
+    "author": "artist",
+    "link": null,
+    "title": "Арт №6"
+  },
+  {
+    "src": "gallery/art-07.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №7"
+  },
+  {
+    "src": "gallery/art-08.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №8"
+  },
+  {
+    "src": "gallery/art-09.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №9"
+  },
+  {
+    "src": "gallery/art-10.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №10"
+  },
+  {
+    "src": "gallery/art-11.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №11"
+  },
+  {
+    "src": "gallery/art-12.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №12"
+  },
+  {
+    "src": "gallery/art-13.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №13"
+  },
+  {
+    "src": "gallery/art-14.png",
+    "author": "artist",
+    "link": null,
+    "title": "Арт №14"
+  },
+  {
+    "src": "gallery/art-15.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №15"
+  },
+  {
+    "src": "gallery/art-16.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №16"
+  },
+  {
+    "src": "gallery/art-17.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №17"
+  },
+  {
+    "src": "gallery/art-18.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №18"
+  },
+  {
+    "src": "gallery/art-19.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №19"
+  },
+  {
+    "src": "gallery/art-20.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №20"
+  },
+  {
+    "src": "gallery/art-21.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №21"
+  },
+  {
+    "src": "gallery/art-22.png",
+    "author": "artist-2",
+    "link": null,
+    "title": "Арт №22"
+  },
+  {
+    "src": "gallery/art-23.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №23"
+  },
+  {
+    "src": "gallery/art-24.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №24"
+  },
+  {
+    "src": "gallery/art-25.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №25"
+  },
+  {
+    "src": "gallery/art-26.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №26"
+  },
+  {
+    "src": "gallery/art-27.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №27"
+  },
+  {
+    "src": "gallery/art-28.png",
+    "author": "artist-2",
+    "link": "https://example.com/artist",
+    "title": "Арт №28"
+  },
+  {
+    "src": "gallery/art-29.png",
+    "author": "artist-1",
+    "link": "https://example.com/artist",
+    "title": "Арт №29"
+  },
+  {
+    "src": "gallery/art-30.png",
+    "author": "artist",
+    "link": null,
+    "title": "Арт №30"
+  },
+  {
+    "src": "gallery/art-31.png",
+    "author": "artist-1",
+    "link": "https://example.com/artist",
+    "title": "Арт №31"
+  },
+  {
+    "src": "gallery/art-32.png",
+    "author": "artist-1",
+    "link": "https://example.com/artist",
+    "title": "Арт №32"
+  },
+  {
+    "src": "gallery/art-33.png",
+    "author": "artist-1",
+    "link": "https://example.com/artist",
+    "title": "Арт №33"
+  },
+  {
+    "src": "gallery/art-34.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №34"
+  },
+  {
+    "src": "gallery/art-35.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №35"
+  },
+  {
+    "src": "gallery/art-36.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №36"
+  },
+  {
+    "src": "gallery/art-37.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №37"
+  },
+  {
+    "src": "gallery/art-38.png",
+    "author": "artist",
+    "link": null,
+    "title": "Арт №38"
+  },
+  {
+    "src": "gallery/art-39.png",
+    "author": "artist",
+    "link": "https://example.com/artist",
+    "title": "Арт №39"
+  },
+  {
+    "src": "gallery/art-40.png",
+    "author": "artist-3",
+    "link": "https://example.com/artist",
+    "title": "Арт №40"
+  },
+  {
+    "src": "gallery/art-41.png",
+    "author": "artist-1",
+    "link": "https://example.com/artist",
+    "title": "Арт №41"
+  },
+  {
+    "src": "gallery/art-42.png",
+    "author": "artist-1",
+    "link": "https://example.com/artist",
+    "title": "Арт №42"
+  }
+]
