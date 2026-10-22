@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   basePath: basePath || undefined,
+  assetPrefix: basePath || undefined,
   // Изображения оптимизируются заранее скриптом scripts/build-media.mjs,
   // поэтому встроенная оптимизация next/image не используется.
   images: { unoptimized: true },
